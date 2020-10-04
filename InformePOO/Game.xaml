@@ -7,29 +7,50 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Game">
-    <Grid Margin="-1,0,1,0" Visibility="Visible" Background="#FF82AA49">
+    <Grid Margin="-1,0,1,0" Visibility="Visible">
+        <Grid.Background>
+            <ImageBrush ImageSource="/MESA2.jpg"/>
+        </Grid.Background>
 
         <Grid.OpacityMask>
             <SolidColorBrush Color="#FFFB2323" Opacity="1"/>
         </Grid.OpacityMask>
-        <Button Name="btnHit" Content="HIT" HorizontalAlignment="Left" Height="30" Margin="203,351,0,0" VerticalAlignment="Top" Width="101" Click="btnHit_Click"/>
-        <Button Name="btnStand" Content="STAND" HorizontalAlignment="Center" Height="30" Margin="0,351,0,0" VerticalAlignment="Top" Width="100" Click="btnStand_Click"/>
-        <Label  Content="Total Jugador" HorizontalAlignment="Left" Height="34" Margin="253,173,0,0" VerticalAlignment="Top" Width="102" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
-        <Label  Content="Total Dealer" HorizontalAlignment="Left" Height="34" Margin="430,173,0,0" VerticalAlignment="Top" Width="96" FontSize="14" FontWeight="Bold" FontStyle="Italic" Background="{x:Null}" OpacityMask="Black" Foreground="Black">
-            <Label.BorderBrush>
+        <Button Name="btnHit" Content="HIT" HorizontalAlignment="Left" Height="39" Margin="10,18,0,0" VerticalAlignment="Top" Width="135" Click="btnHit_Click" BorderBrush="#FFFFDC00" FontSize="20" FontWeight="Bold" FontStyle="Italic">
+            <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
-                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFDAAA00" Offset="1"/>
                 </LinearGradientBrush>
-            </Label.BorderBrush>
-        </Label>
-        <TextBlock Name="txtDealer" HorizontalAlignment="Left" Height="106" Margin="577,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" FontStyle="Italic"/>
-        <TextBlock Name="txtPlayer" HorizontalAlignment="Left" Height="106" Margin="100,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121" FontStyle="Italic"/>
-        <Label Name="lblDealerScore" Content="" HorizontalAlignment="Left" Height="34" Margin="470,0,0,0" VerticalAlignment="Center" Width="86" FontWeight="Normal" FontStyle="Italic"/>
-        <Label Name="lblPlayerScore" Content="" HorizontalAlignment="Left" Height="34" Margin="304,207,0,0" VerticalAlignment="Top" Width="86" FontStyle="Italic"/>
-        <Label Content="Partido Jugador" HorizontalAlignment="Left" Height="40" Margin="94,44,0,0" VerticalAlignment="Top" Width="133" FontSize="16" FontFamily="Segoe UI" FontWeight="Bold" FontStyle="Italic"/>
-        <Label Content="Partido Dealer" HorizontalAlignment="Left" Height="40" Margin="577,44,0,0" VerticalAlignment="Top" Width="123" FontSize="16" FontWeight="Bold" FontStyle="Italic"/>
-        <Button Name="btnReset" Content="RESTART" HorizontalAlignment="Left" Height="30" Margin="499,336,0,0" VerticalAlignment="Top" Width="101" Click="btnReset_Click"  />
+            </Button.Background>
+        </Button>
+        <Button Name="btnStand" Content="STAND" HorizontalAlignment="Left" Height="39" Margin="160,16,0,0" VerticalAlignment="Top" Width="135" Click="btnStand_Click" BorderBrush="#FFFFDC00" FontSize="20" FontWeight="Bold" FontStyle="Italic">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFDAAA00" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock Name="txtDealer" HorizontalAlignment="Left" Height="106" Margin="521,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" FontStyle="Italic" OpacityMask="Black" FontSize="16"/>
+        <TextBlock Name="txtPlayer" HorizontalAlignment="Left" Height="106" Margin="238,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" FontStyle="Italic" OpacityMask="#FFDC4E4E" FontSize="16"/>
+        <Label Name="lblDealerScore" Content="" HorizontalAlignment="Left" Height="29" Margin="600,384,0,0" VerticalAlignment="Top" Width="45" FontWeight="Normal" FontStyle="Italic" BorderBrush="Black" FontSize="16"/>
+        <Label Name="lblPlayerScore" Content="" HorizontalAlignment="Left" Height="29" Margin="160,384,0,0" VerticalAlignment="Top" Width="45" FontStyle="Italic" FontSize="16"/>
+        <Button Name="btnReset" Content="RESTART" HorizontalAlignment="Left" Height="39" Margin="510,18,0,0" VerticalAlignment="Top" Width="135" Click="btnReset_Click" BorderBrush="#FFFFDC00" FontSize="20" FontWeight="Bold" FontStyle="Italic"  >
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFDAAA00" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="EXIT" HorizontalAlignment="Left" Height="39" Margin="655,18,0,0" VerticalAlignment="Top" Width="135" Click="Button_Click" BorderBrush="#FFFFDC00" FontSize="20" FontWeight="Bold" FontStyle="Italic">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFDAAA00" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
     </Grid>
 

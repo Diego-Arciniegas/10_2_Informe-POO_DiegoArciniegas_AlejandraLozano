@@ -18,8 +18,8 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Login.jpg"/>
         </Grid.Background>
-        <Label Content="-UserName:" HorizontalAlignment="Left" Height="48" Margin="215,0,0,0" VerticalAlignment="Center" Width="146" FontSize="24" FontWeight="Bold" Background="{x:Null}" Foreground="White"/>
-        <Button Name="btnLogin" Content="LOGIN" HorizontalAlignment="Left" Height="38" Margin="419,284,0,0" VerticalAlignment="Top" Width="134" FontSize="20" FontWeight="Bold" BorderBrush="#FFFFDC00" Foreground="Black" OpacityMask="#FF090A09" Click="btnLogin_Click" FontStyle="Italic">
+        <Label Content="-UserName:" HorizontalAlignment="Left" Height="48" Margin="215,0,0,0" VerticalAlignment="Center" Width="146" FontSize="24" FontWeight="Bold" Background="{x:Null}" Foreground="White" FontStyle="Italic"/>
+        <Button Name="btnLogin" Content="LOGIN" HorizontalAlignment="Left" Height="39" Margin="418,284,0,0" VerticalAlignment="Top" Width="145" FontSize="20" FontWeight="Bold" BorderBrush="#FFFFDC00" Foreground="Black" OpacityMask="#FF090A09" Click="btnLogin_Click" FontStyle="Italic">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -27,7 +27,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Name="btnRegister" Content="REGISTER" HorizontalAlignment="Left" Height="38" Margin="251,284,0,0" VerticalAlignment="Top" Width="134" FontSize="20" FontWeight="Bold" Foreground="Black" BorderBrush="#FFFFDC00" FontStyle="Italic" Click="btnRegister_Click">
+        <Button Name="btnRegister" Content="REGISTER" HorizontalAlignment="Left" Height="39" Margin="251,284,0,0" VerticalAlignment="Top" Width="145" FontSize="20" FontWeight="Bold" Foreground="Black" BorderBrush="#FFFFDC00" FontStyle="Italic" Click="btnRegister_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -42,11 +42,7 @@
             </Button.OpacityMask>
         </Button>
         <TextBox  Name="txtUserName" HorizontalAlignment="Left" Height="27" Margin="366,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="210" BorderBrush="White" Background="{x:Null}" FontSize="18" Foreground="White"/>
-        <TextBox Name="txtMessages" HorizontalAlignment="Center" Height="28" Margin="0,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontStyle="Italic"   >
-            <TextBox.TextDecorations>
-                <TextDecoration/>
-            </TextBox.TextDecorations>
-        </TextBox>
+        <Label Name="lblMessages" Content="" HorizontalAlignment="Center" Height="27" Margin="0,351,0,0" VerticalAlignment="Top" Width="244" Foreground="White" FontStyle="Italic"/>
 
     </Grid>
 </Page>

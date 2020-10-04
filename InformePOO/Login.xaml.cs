@@ -26,7 +26,7 @@ namespace InformePOO
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
             Welcome w = (Welcome)Window.GetWindow(this);
-            w.frameMain.NavigationService.Navigate(new Login2());
+            w.frameMain.NavigationService.Navigate(new Game());
         }
     }
 }

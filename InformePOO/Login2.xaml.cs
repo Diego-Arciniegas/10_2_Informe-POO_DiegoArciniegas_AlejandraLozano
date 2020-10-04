@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Library;
 
 namespace InformePOO
 {
@@ -23,10 +24,29 @@ namespace InformePOO
             InitializeComponent();
         }
 
-        List<string> UserName = new List<string>();
+        public List<string> UserName = new List<string>() { "Diego", "Alejandra" };
 
 
 
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (string item in UserName)
+            {
+                
+                if (txtUserName.Text != item)
+                {
+
+                    lblMessages.Content = ("-Could Not Find Player. Have You Registerd?");
+                }
+                else
+                {
+
+                    Welcome w = (Welcome)Window.GetWindow(this);
+                    w.frameMain.NavigationService.Navigate(new Login());
+                }
+            }
+
+        }
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
@@ -47,24 +67,11 @@ namespace InformePOO
             {
                 MessageBox.Show(ex.Message);
             }
+
+            txtUserName.Text = "";
         }
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
-        {
-            foreach (string item in UserName)
-            {
 
-                if (txtUserName.Text == item)
-                {
-                    Welcome w = (Welcome)Window.GetWindow(this);
-                    w.frameMain.NavigationService.Navigate(new Game());
-                }
-                else
-                {
-                    txtMessages.Text = ("-Could Not Find Player. Have You Registerd?");
-                }
-            }
 
-        }
     }
 }

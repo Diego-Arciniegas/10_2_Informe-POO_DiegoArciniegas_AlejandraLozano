@@ -25,7 +25,7 @@ namespace InformePOO
 
         private void frameMain_Loaded(object sender, RoutedEventArgs e)
         {
-            frameMain.NavigationService.Navigate(new Login());
+            frameMain.NavigationService.Navigate(new Login2());
         }
     }
 }

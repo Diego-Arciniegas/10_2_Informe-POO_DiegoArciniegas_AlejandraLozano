@@ -9,6 +9,7 @@
   <ItemGroup>
     <None Remove="532650.jpg" />
     <None Remove="Login.jpg" />
+    <None Remove="MESA2.jpg" />
     <None Remove="Welcome %281%29.jpg" />
   </ItemGroup>
 
@@ -17,8 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="532650.jpg" />
     <Resource Include="Login.jpg" />
+    <Resource Include="MESA2.jpg" />
     <Resource Include="Welcome (1).jpg" />
   </ItemGroup>
 

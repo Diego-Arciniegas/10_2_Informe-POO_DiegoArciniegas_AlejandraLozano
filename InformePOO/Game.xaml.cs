@@ -27,6 +27,8 @@ namespace InformePOO
             InitializeComponent();
         }
 
+
+
         public int Check(List<Card> hand)
         {
             int value = 0;
@@ -65,8 +67,6 @@ namespace InformePOO
                 player.AddCard(c);
                 RefreshPlayerCards();
             }
-
-
             int handValue = Check(player.Hand);
             lblPlayerScore.Content = handValue;
 
@@ -76,8 +76,6 @@ namespace InformePOO
                 btnStand.IsEnabled = false;
                 MessageBox.Show("Dealer Win");
             }
-
-
 
 
         }
@@ -102,35 +100,50 @@ namespace InformePOO
                     txtDealer.Text += c.Symbol + c.Suit + "\n";
                     lblDealerScore.Content = Check(dealer.Hand);
 
-                    int DealerValue = Check(dealer.Hand);
-                    lblDealerScore.Content = DealerValue;
-
-                    int handValue = Check(player.Hand);
-                    lblPlayerScore.Content = handValue;
-
-                    if (DealerValue >= 22)
-                    {
-                        btnHit.IsEnabled = false;
-                        btnStand.IsEnabled = false;
-                        MessageBox.Show("Player Win");
-                    }
-
-                    if (handValue > DealerValue && handValue <= 21)
-                    {
-                        btnHit.IsEnabled = false;
-                        btnStand.IsEnabled = false;
-                        MessageBox.Show("Player Win");
-                    }
-                    else
-                    {
-                        btnHit.IsEnabled = false;
-                        btnStand.IsEnabled = false;
-                        MessageBox.Show("Dealer Win");
-                    }
-
 
                 });
+
             }
+            int DealerValue = Check(dealer.Hand);
+            lblDealerScore.Content = DealerValue;
+
+            int handValue = Check(player.Hand);
+            lblPlayerScore.Content = handValue;
+
+            if (DealerValue >= 22)
+            {
+                btnHit.IsEnabled = false;
+                btnStand.IsEnabled = false;
+                MessageBox.Show("Player Win");
+
+            }
+
+            if (handValue > DealerValue && handValue <= 21)
+            {
+                btnHit.IsEnabled = false;
+                btnStand.IsEnabled = false;
+                MessageBox.Show("Player Win");
+
+            }
+            else
+            {
+                if (handValue == DealerValue)
+                {
+                    btnHit.IsEnabled = false;
+                    btnStand.IsEnabled = false;
+                    MessageBox.Show("Tie");
+                }
+                else
+                {
+                    btnHit.IsEnabled = false;
+                    btnStand.IsEnabled = false;
+                    MessageBox.Show("Dealer Win");
+                }
+
+            }
+
+
+
 
         }
 
@@ -142,12 +155,17 @@ namespace InformePOO
 
         private void btnReset_Click(object sender, RoutedEventArgs e)
         {
+
             txtDealer.Text = "";
             txtPlayer.Text = "";
             lblDealerScore.Content = "";
             lblPlayerScore.Content = "";
             btnHit.IsEnabled = true;
             btnStand.IsEnabled = true;
+
+
+            Welcome w = (Welcome)Window.GetWindow(this);
+            w.frameMain.NavigationService.Navigate(new Login());
 
         }
 
@@ -159,6 +177,12 @@ namespace InformePOO
             {
                 txtPlayer.Text += c.Symbol + c.Suit + "\n";
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Welcome w = (Welcome)Window.GetWindow(this);
+            w.frameMain.NavigationService.Navigate(new Login2());
         }
     }
 }
