@@ -1,0 +1,52 @@
+﻿<Page x:Class="InformePOO.Login2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InformePOO"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Login2">
+
+    <Grid>
+        <Grid.OpacityMask>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.OpacityMask>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Login.jpg"/>
+        </Grid.Background>
+        <Label Content="-UserName:" HorizontalAlignment="Left" Height="48" Margin="215,0,0,0" VerticalAlignment="Center" Width="146" FontSize="24" FontWeight="Bold" Background="{x:Null}" Foreground="White"/>
+        <Button Name="btnLogin" Content="LOGIN" HorizontalAlignment="Left" Height="38" Margin="419,284,0,0" VerticalAlignment="Top" Width="134" FontSize="20" FontWeight="Bold" BorderBrush="#FFFFDC00" Foreground="Black" OpacityMask="#FF090A09" Click="btnLogin_Click" FontStyle="Italic">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFD7A400" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Name="btnRegister" Content="REGISTER" HorizontalAlignment="Left" Height="38" Margin="251,284,0,0" VerticalAlignment="Top" Width="134" FontSize="20" FontWeight="Bold" Foreground="Black" BorderBrush="#FFFFDC00" FontStyle="Italic" Click="btnRegister_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFDAAA00" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.OpacityMask>
+        </Button>
+        <TextBox  Name="txtUserName" HorizontalAlignment="Left" Height="27" Margin="366,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="210" BorderBrush="White" Background="{x:Null}" FontSize="18" Foreground="White"/>
+        <TextBox Name="txtMessages" HorizontalAlignment="Center" Height="28" Margin="0,345,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="252" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontStyle="Italic"   >
+            <TextBox.TextDecorations>
+                <TextDecoration/>
+            </TextBox.TextDecorations>
+        </TextBox>
+
+    </Grid>
+</Page>

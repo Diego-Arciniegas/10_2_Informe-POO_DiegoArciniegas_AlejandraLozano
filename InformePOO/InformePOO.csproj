@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="532650.jpg" />
+    <None Remove="Login.jpg" />
+    <None Remove="Welcome %281%29.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Library\Library.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="532650.jpg" />
+    <Resource Include="Login.jpg" />
+    <Resource Include="Welcome (1).jpg" />
+  </ItemGroup>
+
+</Project>
