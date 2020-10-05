@@ -117,31 +117,32 @@ namespace InformePOO
                 MessageBox.Show("Player Win");
 
             }
-
-            if (handValue > DealerValue && handValue <= 21)
-            {
-                btnHit.IsEnabled = false;
-                btnStand.IsEnabled = false;
-                MessageBox.Show("Player Win");
-
-            }
             else
             {
-                if (handValue == DealerValue)
+                if (handValue > DealerValue && handValue <= 21)
                 {
                     btnHit.IsEnabled = false;
                     btnStand.IsEnabled = false;
-                    MessageBox.Show("Tie");
+                    MessageBox.Show("Player Win");
+
                 }
                 else
                 {
-                    btnHit.IsEnabled = false;
-                    btnStand.IsEnabled = false;
-                    MessageBox.Show("Dealer Win");
+                    if (handValue == DealerValue)
+                    {
+                        btnHit.IsEnabled = false;
+                        btnStand.IsEnabled = false;
+                        MessageBox.Show("Tie");
+                    }
+                    else
+                    {
+                        btnHit.IsEnabled = false;
+                        btnStand.IsEnabled = false;
+                        MessageBox.Show("Dealer Win");
+                    }
+
                 }
-
             }
-
 
 
 
